@@ -64,6 +64,7 @@
     <Compile Include="Billing_History.Designer.cs">
       <DependentUpon>Billing_History.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connect.cs" />
     <Compile Include="Form_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +85,7 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserBase.cs" />
     <Compile Include="UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
