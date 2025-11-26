@@ -7,18 +7,25 @@ using System.Windows.Forms;
 
 namespace Billing_System
 {
-    public abstract class UserBase
-    {
-        // Encapsulation
-        private int _id;
-        private string _username;
-        private string _passwordHash;
-        private string _fullName;
 
-        public int Id
+    public class User
+    {
+        private int _userId;
+        private string _username;
+        private string _fullName;
+        private string _passwordHash;
+        public string Role { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public DateTime DoB { get; set; }
+        public string Sex { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        public int UserId
         {
-            get => _id;
-            protected set => _id = value;
+            get => _userId;
+            protected set => UserId = value;
         }
 
         public string Username
@@ -53,37 +60,12 @@ namespace Billing_System
                 _fullName = value;
             }
         }
-
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-
         // Polymorphism
-        public abstract void ShowRole();
+        //public abstract void ShowRole();
     }
-    //Admin
-    public class User_Admin : UserBase
-{
-    public DateTime DoB { get; set; }
-    public string Sex { get; set; }
+    
 
-    public override void ShowRole()
-    {
-        Console.WriteLine("Role: Admin");
-    }
-    }
-    //Customer
-    public class User_Customer : UserBase
-{
-    public string Phone { get; set; }
-    public string Email { get; set; }
-    public string Address { get; set; }
-    public DateTime DoB { get; set; }
-    public string Sex { get; set; }
 
-    public override void ShowRole()
-    {
-        Console.WriteLine("Role: Customer");
-    }
-}
     //category
     public class Category
     {
@@ -114,7 +96,7 @@ namespace Billing_System
 
         // FK
         public int CustomerId { get; set; }
-        public User_Customer Customer { get; set; }
+        //public User_Customer Customer { get; set; }
 
         public DateTime OrderDate { get; set; }
         public string Status { get; set; }
@@ -172,7 +154,7 @@ namespace Billing_System
         public Product Product { get; set; }
 
         public int AdminId { get; set; }
-        public User_Admin Admin { get; set; }
+        //public User_Admin Admin { get; set; }
 
         public string TransactionType { get; set; }  // IN / OUT
         public int Quantity { get; set; }

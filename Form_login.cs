@@ -5,14 +5,26 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Billing_System
 {
     public partial class Form1 : Form
     {
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(bytes).Replace("-", "").ToLower();
+            }
+        }
+
+
         public static string Username;
         public static string Password;
         public Form1()
@@ -35,49 +47,60 @@ namespace Billing_System
         private void btn_login_Click(object sender, EventArgs e)
         {
             
-            Username = txt_username.Text;
-            Password = txt_password.Text;
-            User_Admin user_admin = new User_Admin();
-            user_admin.Username = Username;
-            user_admin.PasswordHash = Password;
+            string Username = txt_username.Text;
+            int Password = int.Parse(txt_password.Text);
+
+            User user = new User();
+            user.Username = Username;
+            user.PasswordHash = Password.ToString();
+
             Connect connect = new Connect();
-            
-            
+            string hashedPassword = HashPassword(Password.ToString());
+
             if (txt_username.Text == "" || txt_password.Text == "")
             {
                 MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+               
             }
             try
             {
                 connect.OpenConnection();
-                string filterAdmin = "SELECT COUNT(*) FROM User_Admin WHERE Username=@username AND PasswordHash=@passwordhash";
-                SqlCommand cmdAdmin = new SqlCommand(filterAdmin,connect.conn);
-                cmdAdmin.Parameters.AddWithValue("@username", Username);
-                cmdAdmin.Parameters.AddWithValue("@passwordhash", Password);
-                int resultAdmin =(int)cmdAdmin.ExecuteScalar();
+                string filterUsers = "SELECT * FROM Users WHERE Username=@username AND PasswordHash=@passwordhash";
+                SqlCommand cmd = new SqlCommand(filterUsers,connect.conn);
+                cmd.Parameters.AddWithValue("@username", Username);
+                cmd.Parameters.AddWithValue("@passwordhash", Password);
+                //int result =(int)cmd.ExecuteScalar();
+                //int result = cmd.ExecuteNonQuery();
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                string filterCustomer = "SELECT COUNT(*) FROM User_Customer WHERE Username=@username AND PasswordHash=@passwordhash";
-                SqlCommand cmdCustomer = new SqlCommand(filterCustomer, connect.conn);
-                cmdCustomer.Parameters.AddWithValue("@username", Username);
-                cmdCustomer.Parameters.AddWithValue("@passwordhash", Password);
-                int resultCustomer = (int)cmdCustomer.ExecuteScalar();
-                
-                if (resultAdmin >0)
-                { 
-                    Login login = new Login();
-                    login.Show();
-                }
-                if (resultCustomer >0 )
-                { 
-                   UserDashboard login = new UserDashboard();
-                   login.Show();
+               if (reader.Read())
+                {
+
+                    string fullName = reader["FullName"].ToString();
+                    string role = reader["Role"].ToString();
+                    MessageBox.Show($"Welcome {fullName} ({role})!");
+                    if (role == "Admin")
+                    {
+                        Login login = new Login();
+                        login.Show();
+                        this.Hide();
+                        login.FormClosed += (s, args) => Application.Exit();
+
+                    }
+                    else if (role == "Customer")
+                    {
+                        UserDashboard login = new UserDashboard();
+                        login.Show();
+                        
+                    }
+
+
                 }
                 else
                 {
-                    MessageBox.Show("Please SignUp an account!!","Don't have any account",MessageBoxButtons.OKCancel,MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Invalid username or password!" , "Don't have any account?", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
                 }
-                     
+               connect.CloseConnection();
             }
             catch (Exception ex)
             {
