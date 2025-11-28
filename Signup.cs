@@ -27,9 +27,6 @@ namespace Billing_System
 
         private void btn_create_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Account created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Form1 form = new Form1();
-            form.ShowDialog();
             
             string Username = txt_user.Text;
             string Password = txt_pass.Text;
@@ -81,6 +78,9 @@ namespace Billing_System
                     MessageBox.Show("Password don't match");
                 }
                 connect.CloseConnection();
+                Form1 form = new Form1();
+                form.Show();
+                this.Close();
 
             }
             catch(Exception ex)

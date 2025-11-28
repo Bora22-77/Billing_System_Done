@@ -25,4 +25,29 @@ namespace Billing_System
             }
         }
     }
+
+
+    //Option 2 to connectdatabase
+    public class Database
+    {
+        private static Database instance;
+        private string connectionString = @"Server=localhost\\DBMGM;Database=DSFinal;Trusted_connection=True;";
+
+        private Database() { }
+
+        public static Database Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new Database();
+                return instance;
+            }
+        }
+
+        public SqlConnection GetConnection()
+        {
+            return new SqlConnection(connectionString);
+        }
+    }
 }

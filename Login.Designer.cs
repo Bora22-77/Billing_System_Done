@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_product = new System.Windows.Forms.TabPage();
+            this.cbo_category_product = new System.Windows.Forms.ComboBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,22 +49,21 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.button25 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lv_product = new System.Windows.Forms.ListView();
             this.ProductID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProductName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Discount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
             this.txt_quantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.txt_price = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_discr = new System.Windows.Forms.TextBox();
+            this.txt_search_product = new System.Windows.Forms.TextBox();
             this.txt_productname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,11 +71,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDisplay = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tab_order = new System.Windows.Forms.TabPage();
             this.button24 = new System.Windows.Forms.Button();
@@ -131,23 +131,22 @@
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tab_order_item = new System.Windows.Forms.TabPage();
             this.button27 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_categoryname_category = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.lv_category = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_update_category = new System.Windows.Forms.Button();
+            this.btn_add_category = new System.Windows.Forms.Button();
+            this.btn_new_category = new System.Windows.Forms.Button();
+            this.btn_search_category = new System.Windows.Forms.Button();
+            this.btn_delete_category = new System.Windows.Forms.Button();
+            this.btn_view_category = new System.Windows.Forms.Button();
             this.tab_billing = new System.Windows.Forms.TabPage();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -164,7 +163,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txt_delete_Billing = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
@@ -203,6 +202,8 @@
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
+            this.txt_categoryid_caregory = new System.Windows.Forms.TextBox();
+            this.txt_search_category = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -240,8 +241,9 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1655, 86);
+            this.panel1.Size = new System.Drawing.Size(1830, 86);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -279,24 +281,25 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1655, 668);
+            this.tabControl1.Size = new System.Drawing.Size(1830, 668);
             this.tabControl1.TabIndex = 16;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.btn_product_Click);
             // 
             // tab_product
             // 
             this.tab_product.BackColor = System.Drawing.Color.LightBlue;
+            this.tab_product.Controls.Add(this.cbo_category_product);
             this.tab_product.Controls.Add(this.bindingNavigator1);
             this.tab_product.Controls.Add(this.button25);
-            this.tab_product.Controls.Add(this.listView1);
+            this.tab_product.Controls.Add(this.lv_product);
             this.tab_product.Controls.Add(this.label7);
             this.tab_product.Controls.Add(this.txt_quantity);
             this.tab_product.Controls.Add(this.label5);
-            this.tab_product.Controls.Add(this.textBox4);
             this.tab_product.Controls.Add(this.txt_price);
             this.tab_product.Controls.Add(this.label6);
             this.tab_product.Controls.Add(this.label4);
-            this.tab_product.Controls.Add(this.textBox3);
+            this.tab_product.Controls.Add(this.txt_discr);
+            this.tab_product.Controls.Add(this.txt_search_product);
             this.tab_product.Controls.Add(this.txt_productname);
             this.tab_product.Controls.Add(this.panel2);
             this.tab_product.Controls.Add(this.label2);
@@ -307,10 +310,20 @@
             this.tab_product.Margin = new System.Windows.Forms.Padding(300);
             this.tab_product.Name = "tab_product";
             this.tab_product.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_product.Size = new System.Drawing.Size(1647, 621);
+            this.tab_product.Size = new System.Drawing.Size(1822, 621);
             this.tab_product.TabIndex = 0;
             this.tab_product.Text = "Product";
             this.tab_product.Click += new System.EventHandler(this.tab_product_Click);
+            // 
+            // cbo_category_product
+            // 
+            this.cbo_category_product.BackColor = System.Drawing.Color.White;
+            this.cbo_category_product.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_category_product.FormattingEnabled = true;
+            this.cbo_category_product.Location = new System.Drawing.Point(247, 358);
+            this.cbo_category_product.Name = "cbo_category_product";
+            this.cbo_category_product.Size = new System.Drawing.Size(292, 40);
+            this.cbo_category_product.TabIndex = 81;
             // 
             // bindingNavigator1
             // 
@@ -337,7 +350,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1641, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1816, 27);
             this.bindingNavigator1.TabIndex = 80;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -347,13 +360,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -363,7 +376,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -372,7 +385,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -381,13 +394,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -402,7 +415,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -410,7 +423,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -419,13 +432,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // button25
             // 
@@ -439,27 +452,28 @@
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
-            // listView1
+            // lv_product
             // 
-            this.listView1.BackColor = System.Drawing.Color.Silver;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_product.BackColor = System.Drawing.Color.Silver;
+            this.lv_product.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ProductID,
             this.ProductName,
             this.Quantity,
             this.Price,
             this.Category,
-            this.Discount,
-            this.columnHeader1});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(545, 106);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1037, 331);
-            this.listView1.TabIndex = 54;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.Discount});
+            this.lv_product.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_product.FullRowSelect = true;
+            this.lv_product.GridLines = true;
+            this.lv_product.HideSelection = false;
+            this.lv_product.Location = new System.Drawing.Point(573, 93);
+            this.lv_product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_product.Name = "lv_product";
+            this.lv_product.Size = new System.Drawing.Size(1037, 331);
+            this.lv_product.TabIndex = 54;
+            this.lv_product.UseCompatibleStateImageBehavior = false;
+            this.lv_product.View = System.Windows.Forms.View.Details;
+            this.lv_product.SelectedIndexChanged += new System.EventHandler(this.lv_product_SelectedIndexChanged);
             // 
             // ProductID
             // 
@@ -473,28 +487,23 @@
             // 
             // Quantity
             // 
-            this.Quantity.Text = "Quantity";
+            this.Quantity.Text = "Price";
             this.Quantity.Width = 121;
             // 
             // Price
             // 
-            this.Price.Text = "Price";
+            this.Price.Text = "Quantity";
             this.Price.Width = 120;
             // 
             // Category
             // 
-            this.Category.Text = "Category";
+            this.Category.Text = "Discription";
             this.Category.Width = 170;
             // 
             // Discount
             // 
-            this.Discount.Text = "Discription";
+            this.Discount.Text = "Category";
             this.Discount.Width = 150;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Discount";
-            this.columnHeader1.Width = 100;
             // 
             // label7
             // 
@@ -509,7 +518,7 @@
             this.txt_quantity.Location = new System.Drawing.Point(247, 239);
             this.txt_quantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_quantity.Name = "txt_quantity";
-            this.txt_quantity.Size = new System.Drawing.Size(191, 36);
+            this.txt_quantity.Size = new System.Drawing.Size(292, 36);
             this.txt_quantity.TabIndex = 42;
             // 
             // label5
@@ -521,20 +530,12 @@
             this.label5.TabIndex = 41;
             this.label5.Text = "Quantity";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(251, 361);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 36);
-            this.textBox4.TabIndex = 40;
-            // 
             // txt_price
             // 
-            this.txt_price.Location = new System.Drawing.Point(251, 305);
+            this.txt_price.Location = new System.Drawing.Point(247, 302);
             this.txt_price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(187, 36);
+            this.txt_price.Size = new System.Drawing.Size(292, 36);
             this.txt_price.TabIndex = 40;
             // 
             // label6
@@ -542,9 +543,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(65, 363);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 29);
+            this.label6.Size = new System.Drawing.Size(115, 29);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Discount(%)";
+            this.label6.Text = "Category";
             // 
             // label4
             // 
@@ -555,20 +556,28 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Price";
             // 
-            // textBox3
+            // txt_discr
             // 
-            this.textBox3.Location = new System.Drawing.Point(247, 183);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 36);
-            this.textBox3.TabIndex = 37;
+            this.txt_discr.Location = new System.Drawing.Point(247, 183);
+            this.txt_discr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_discr.Name = "txt_discr";
+            this.txt_discr.Size = new System.Drawing.Size(292, 36);
+            this.txt_discr.TabIndex = 37;
+            // 
+            // txt_search_product
+            // 
+            this.txt_search_product.Location = new System.Drawing.Point(604, 437);
+            this.txt_search_product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_search_product.Name = "txt_search_product";
+            this.txt_search_product.Size = new System.Drawing.Size(544, 36);
+            this.txt_search_product.TabIndex = 37;
             // 
             // txt_productname
             // 
             this.txt_productname.Location = new System.Drawing.Point(247, 129);
             this.txt_productname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_productname.Name = "txt_productname";
-            this.txt_productname.Size = new System.Drawing.Size(191, 36);
+            this.txt_productname.Size = new System.Drawing.Size(292, 36);
             this.txt_productname.TabIndex = 37;
             // 
             // panel2
@@ -579,7 +588,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1641, 62);
+            this.panel2.Size = new System.Drawing.Size(1816, 62);
             this.panel2.TabIndex = 36;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -616,13 +625,13 @@
             // 
             this.groupBox8.BackColor = System.Drawing.Color.MediumPurple;
             this.groupBox8.Controls.Add(this.label43);
-            this.groupBox8.Controls.Add(this.btn_Save);
-            this.groupBox8.Controls.Add(this.button21);
+            this.groupBox8.Controls.Add(this.btn_add);
+            this.groupBox8.Controls.Add(this.btn_search);
             this.groupBox8.Controls.Add(this.btnNew);
             this.groupBox8.Controls.Add(this.btnUpdate);
-            this.groupBox8.Controls.Add(this.btnDisplay);
+            this.groupBox8.Controls.Add(this.btnView);
             this.groupBox8.Controls.Add(this.btnDelete);
-            this.groupBox8.Location = new System.Drawing.Point(285, 464);
+            this.groupBox8.Location = new System.Drawing.Point(348, 492);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -640,27 +649,29 @@
             this.label43.TabIndex = 18;
             this.label43.Text = "Operations";
             // 
-            // btn_Save
+            // btn_add
             // 
-            this.btn_Save.BackColor = System.Drawing.Color.Yellow;
-            this.btn_Save.Location = new System.Drawing.Point(13, 62);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(159, 53);
-            this.btn_Save.TabIndex = 43;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_add.BackColor = System.Drawing.Color.Yellow;
+            this.btn_add.Location = new System.Drawing.Point(13, 62);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(159, 53);
+            this.btn_add.TabIndex = 43;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button21
+            // btn_search
             // 
-            this.button21.BackColor = System.Drawing.Color.Yellow;
-            this.button21.Location = new System.Drawing.Point(960, 60);
-            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(157, 53);
-            this.button21.TabIndex = 44;
-            this.button21.Text = "Search";
-            this.button21.UseVisualStyleBackColor = false;
+            this.btn_search.BackColor = System.Drawing.Color.Yellow;
+            this.btn_search.Location = new System.Drawing.Point(960, 60);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(157, 53);
+            this.btn_search.TabIndex = 44;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.button21_Click);
             // 
             // btnNew
             // 
@@ -672,6 +683,7 @@
             this.btnNew.TabIndex = 45;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnUpdate
             // 
@@ -683,17 +695,19 @@
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnDisplay
+            // btnView
             // 
-            this.btnDisplay.BackColor = System.Drawing.Color.Yellow;
-            this.btnDisplay.Location = new System.Drawing.Point(771, 60);
-            this.btnDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(157, 53);
-            this.btnDisplay.TabIndex = 44;
-            this.btnDisplay.Text = "View All";
-            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnView.BackColor = System.Drawing.Color.Yellow;
+            this.btnView.Location = new System.Drawing.Point(771, 60);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(157, 53);
+            this.btnView.TabIndex = 44;
+            this.btnView.Text = "View All";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // btnDelete
             // 
@@ -705,6 +719,7 @@
             this.btnDelete.TabIndex = 46;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tab_order
             // 
@@ -725,7 +740,7 @@
             this.tab_order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_order.Name = "tab_order";
             this.tab_order.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_order.Size = new System.Drawing.Size(1647, 621);
+            this.tab_order.Size = new System.Drawing.Size(1822, 621);
             this.tab_order.TabIndex = 1;
             this.tab_order.Text = "CustomerOrder";
             this.tab_order.Click += new System.EventHandler(this.tab_order_Click);
@@ -859,7 +874,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1641, 62);
+            this.panel3.Size = new System.Drawing.Size(1816, 62);
             this.panel3.TabIndex = 37;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -965,7 +980,7 @@
             this.tab_payment.Location = new System.Drawing.Point(4, 43);
             this.tab_payment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_payment.Name = "tab_payment";
-            this.tab_payment.Size = new System.Drawing.Size(1647, 621);
+            this.tab_payment.Size = new System.Drawing.Size(1822, 621);
             this.tab_payment.TabIndex = 2;
             this.tab_payment.Text = "Payment";
             this.tab_payment.Click += new System.EventHandler(this.tab_payment_Click);
@@ -1183,7 +1198,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1647, 62);
+            this.panel5.Size = new System.Drawing.Size(1822, 62);
             this.panel5.TabIndex = 57;
             // 
             // label10
@@ -1245,20 +1260,22 @@
             // tab_order_item
             // 
             this.tab_order_item.BackColor = System.Drawing.Color.LightBlue;
+            this.tab_order_item.Controls.Add(this.txt_search_category);
             this.tab_order_item.Controls.Add(this.button27);
-            this.tab_order_item.Controls.Add(this.textBox5);
             this.tab_order_item.Controls.Add(this.label25);
-            this.tab_order_item.Controls.Add(this.textBox7);
+            this.tab_order_item.Controls.Add(this.txt_categoryid_caregory);
+            this.tab_order_item.Controls.Add(this.txt_categoryname_category);
             this.tab_order_item.Controls.Add(this.label26);
-            this.tab_order_item.Controls.Add(this.listView3);
+            this.tab_order_item.Controls.Add(this.lv_category);
             this.tab_order_item.Controls.Add(this.panel4);
             this.tab_order_item.Controls.Add(this.groupBox6);
             this.tab_order_item.Location = new System.Drawing.Point(4, 43);
             this.tab_order_item.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_order_item.Name = "tab_order_item";
-            this.tab_order_item.Size = new System.Drawing.Size(1647, 621);
+            this.tab_order_item.Size = new System.Drawing.Size(1822, 621);
             this.tab_order_item.TabIndex = 3;
             this.tab_order_item.Text = "Category";
+            this.tab_order_item.Click += new System.EventHandler(this.tab_order_item_Click);
             // 
             // button27
             // 
@@ -1272,14 +1289,6 @@
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(197, 166);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 41);
-            this.textBox5.TabIndex = 64;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -1289,13 +1298,13 @@
             this.label25.TabIndex = 61;
             this.label25.Text = "Category Name";
             // 
-            // textBox7
+            // txt_categoryname_category
             // 
-            this.textBox7.Location = new System.Drawing.Point(197, 101);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 41);
-            this.textBox7.TabIndex = 64;
+            this.txt_categoryname_category.Location = new System.Drawing.Point(218, 166);
+            this.txt_categoryname_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_categoryname_category.Name = "txt_categoryname_category";
+            this.txt_categoryname_category.Size = new System.Drawing.Size(292, 41);
+            this.txt_categoryname_category.TabIndex = 64;
             // 
             // label26
             // 
@@ -1306,22 +1315,24 @@
             this.label26.TabIndex = 61;
             this.label26.Text = "Category ID";
             // 
-            // listView3
+            // lv_category
             // 
-            this.listView3.BackColor = System.Drawing.Color.Silver;
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_category.BackColor = System.Drawing.Color.Silver;
+            this.lv_category.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7});
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.GridLines = true;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(516, 82);
-            this.listView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(933, 331);
-            this.listView3.TabIndex = 55;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.lv_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_category.FullRowSelect = true;
+            this.lv_category.GridLines = true;
+            this.lv_category.HideSelection = false;
+            this.lv_category.Location = new System.Drawing.Point(733, 66);
+            this.lv_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_category.Name = "lv_category";
+            this.lv_category.Size = new System.Drawing.Size(933, 331);
+            this.lv_category.TabIndex = 55;
+            this.lv_category.UseCompatibleStateImageBehavior = false;
+            this.lv_category.View = System.Windows.Forms.View.Details;
+            this.lv_category.SelectedIndexChanged += new System.EventHandler(this.lv_category_SelectedIndexChanged);
             // 
             // columnHeader6
             // 
@@ -1341,7 +1352,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1647, 62);
+            this.panel4.Size = new System.Drawing.Size(1822, 62);
             this.panel4.TabIndex = 38;
             // 
             // label12
@@ -1358,19 +1369,20 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label41);
-            this.groupBox6.Controls.Add(this.button4);
-            this.groupBox6.Controls.Add(this.button9);
-            this.groupBox6.Controls.Add(this.button7);
-            this.groupBox6.Controls.Add(this.button19);
-            this.groupBox6.Controls.Add(this.button6);
-            this.groupBox6.Controls.Add(this.button8);
-            this.groupBox6.Location = new System.Drawing.Point(311, 423);
+            this.groupBox6.Controls.Add(this.btn_update_category);
+            this.groupBox6.Controls.Add(this.btn_add_category);
+            this.groupBox6.Controls.Add(this.btn_new_category);
+            this.groupBox6.Controls.Add(this.btn_search_category);
+            this.groupBox6.Controls.Add(this.btn_delete_category);
+            this.groupBox6.Controls.Add(this.btn_view_category);
+            this.groupBox6.Location = new System.Drawing.Point(147, 423);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Size = new System.Drawing.Size(1197, 187);
             this.groupBox6.TabIndex = 78;
             this.groupBox6.TabStop = false;
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // label41
             // 
@@ -1382,71 +1394,77 @@
             this.label41.TabIndex = 18;
             this.label41.Text = "Operations";
             // 
-            // button4
+            // btn_update_category
             // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.Location = new System.Drawing.Point(421, 73);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 53);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_update_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_update_category.Location = new System.Drawing.Point(421, 73);
+            this.btn_update_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update_category.Name = "btn_update_category";
+            this.btn_update_category.Size = new System.Drawing.Size(159, 53);
+            this.btn_update_category.TabIndex = 60;
+            this.btn_update_category.Text = "Update";
+            this.btn_update_category.UseVisualStyleBackColor = false;
+            this.btn_update_category.Click += new System.EventHandler(this.btn_update_category_Click);
             // 
-            // button9
+            // btn_add_category
             // 
-            this.button9.BackColor = System.Drawing.Color.Yellow;
-            this.button9.Location = new System.Drawing.Point(47, 73);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(159, 53);
-            this.button9.TabIndex = 56;
-            this.button9.Text = "Save";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btn_add_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_add_category.Location = new System.Drawing.Point(47, 73);
+            this.btn_add_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_add_category.Name = "btn_add_category";
+            this.btn_add_category.Size = new System.Drawing.Size(159, 53);
+            this.btn_add_category.TabIndex = 56;
+            this.btn_add_category.Text = "Add";
+            this.btn_add_category.UseVisualStyleBackColor = false;
+            this.btn_add_category.Click += new System.EventHandler(this.btn_add_category_Click);
             // 
-            // button7
+            // btn_new_category
             // 
-            this.button7.BackColor = System.Drawing.Color.Yellow;
-            this.button7.Location = new System.Drawing.Point(227, 73);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(159, 54);
-            this.button7.TabIndex = 58;
-            this.button7.Text = "New";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn_new_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_new_category.Location = new System.Drawing.Point(227, 73);
+            this.btn_new_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_new_category.Name = "btn_new_category";
+            this.btn_new_category.Size = new System.Drawing.Size(159, 54);
+            this.btn_new_category.TabIndex = 58;
+            this.btn_new_category.Text = "New";
+            this.btn_new_category.UseVisualStyleBackColor = false;
+            this.btn_new_category.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button19
+            // btn_search_category
             // 
-            this.button19.BackColor = System.Drawing.Color.Yellow;
-            this.button19.Location = new System.Drawing.Point(997, 73);
-            this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(157, 53);
-            this.button19.TabIndex = 57;
-            this.button19.Text = "Search";
-            this.button19.UseVisualStyleBackColor = false;
+            this.btn_search_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_search_category.Location = new System.Drawing.Point(997, 73);
+            this.btn_search_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_search_category.Name = "btn_search_category";
+            this.btn_search_category.Size = new System.Drawing.Size(157, 53);
+            this.btn_search_category.TabIndex = 57;
+            this.btn_search_category.Text = "Search";
+            this.btn_search_category.UseVisualStyleBackColor = false;
+            this.btn_search_category.Click += new System.EventHandler(this.btn_search_category_Click);
             // 
-            // button6
+            // btn_delete_category
             // 
-            this.button6.BackColor = System.Drawing.Color.Yellow;
-            this.button6.Location = new System.Drawing.Point(613, 73);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 53);
-            this.button6.TabIndex = 59;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_delete_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_delete_category.Location = new System.Drawing.Point(613, 73);
+            this.btn_delete_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete_category.Name = "btn_delete_category";
+            this.btn_delete_category.Size = new System.Drawing.Size(159, 53);
+            this.btn_delete_category.TabIndex = 59;
+            this.btn_delete_category.Text = "Delete";
+            this.btn_delete_category.UseVisualStyleBackColor = false;
+            this.btn_delete_category.Click += new System.EventHandler(this.btn_delete_category_Click);
             // 
-            // button8
+            // btn_view_category
             // 
-            this.button8.BackColor = System.Drawing.Color.Yellow;
-            this.button8.Location = new System.Drawing.Point(809, 73);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(157, 53);
-            this.button8.TabIndex = 57;
-            this.button8.Text = "View All";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_view_category.BackColor = System.Drawing.Color.Yellow;
+            this.btn_view_category.Location = new System.Drawing.Point(809, 73);
+            this.btn_view_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_view_category.Name = "btn_view_category";
+            this.btn_view_category.Size = new System.Drawing.Size(157, 53);
+            this.btn_view_category.TabIndex = 57;
+            this.btn_view_category.Text = "View All";
+            this.btn_view_category.UseVisualStyleBackColor = false;
+            this.btn_view_category.Click += new System.EventHandler(this.btn_view_category_Click);
             // 
             // tab_billing
             // 
@@ -1469,7 +1487,7 @@
             this.tab_billing.Location = new System.Drawing.Point(4, 43);
             this.tab_billing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_billing.Name = "tab_billing";
-            this.tab_billing.Size = new System.Drawing.Size(1647, 621);
+            this.tab_billing.Size = new System.Drawing.Size(1822, 621);
             this.tab_billing.TabIndex = 4;
             this.tab_billing.Text = "Billing";
             // 
@@ -1619,7 +1637,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.txt_delete_Billing);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.button14);
             this.groupBox1.Controls.Add(this.label19);
@@ -1642,13 +1660,13 @@
             this.label20.TabIndex = 23;
             this.label20.Text = "search by ID or Selete on ListView to Delete";
             // 
-            // txtSearch
+            // txt_delete_Billing
             // 
-            this.txtSearch.Location = new System.Drawing.Point(51, 62);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(348, 41);
-            this.txtSearch.TabIndex = 22;
+            this.txt_delete_Billing.Location = new System.Drawing.Point(51, 62);
+            this.txt_delete_Billing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_delete_Billing.Name = "txt_delete_Billing";
+            this.txt_delete_Billing.Size = new System.Drawing.Size(348, 41);
+            this.txt_delete_Billing.TabIndex = 22;
             // 
             // label16
             // 
@@ -1723,7 +1741,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1647, 62);
+            this.panel6.Size = new System.Drawing.Size(1822, 62);
             this.panel6.TabIndex = 57;
             // 
             // label11
@@ -1799,7 +1817,7 @@
             this.tab_stock.Location = new System.Drawing.Point(4, 43);
             this.tab_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_stock.Name = "tab_stock";
-            this.tab_stock.Size = new System.Drawing.Size(1647, 621);
+            this.tab_stock.Size = new System.Drawing.Size(1822, 621);
             this.tab_stock.TabIndex = 5;
             this.tab_stock.Text = "Stock";
             this.tab_stock.Click += new System.EventHandler(this.tab_stock_Click);
@@ -1942,7 +1960,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1647, 62);
+            this.panel7.Size = new System.Drawing.Size(1822, 62);
             this.panel7.TabIndex = 58;
             // 
             // label13
@@ -2028,11 +2046,28 @@
             this.label40.TabIndex = 18;
             this.label40.Text = "Operations";
             // 
+            // txt_categoryid_caregory
+            // 
+            this.txt_categoryid_caregory.Location = new System.Drawing.Point(218, 103);
+            this.txt_categoryid_caregory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_categoryid_caregory.Name = "txt_categoryid_caregory";
+            this.txt_categoryid_caregory.ReadOnly = true;
+            this.txt_categoryid_caregory.Size = new System.Drawing.Size(292, 41);
+            this.txt_categoryid_caregory.TabIndex = 64;
+            // 
+            // txt_search_category
+            // 
+            this.txt_search_category.Location = new System.Drawing.Point(183, 341);
+            this.txt_search_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_search_category.Name = "txt_search_category";
+            this.txt_search_category.Size = new System.Drawing.Size(544, 41);
+            this.txt_search_category.TabIndex = 80;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1655, 754);
+            this.ClientSize = new System.Drawing.Size(1830, 754);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2107,8 +2142,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnDisplay;
-        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox txt_quantity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_price;
@@ -2118,7 +2153,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lv_product;
         private System.Windows.Forms.ColumnHeader ProductID;
         private System.Windows.Forms.ColumnHeader ProductName;
         private System.Windows.Forms.ColumnHeader Quantity;
@@ -2135,14 +2170,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView lv_category;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_discr;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.ColumnHeader columnHeader11;
@@ -2150,11 +2184,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_update_category;
+        private System.Windows.Forms.Button btn_delete_category;
+        private System.Windows.Forms.Button btn_new_category;
+        private System.Windows.Forms.Button btn_view_category;
+        private System.Windows.Forms.Button btn_add_category;
         private System.Windows.Forms.ListView listView5;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
@@ -2172,7 +2206,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button10;
@@ -2190,7 +2223,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txt_delete_Billing;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -2203,11 +2236,10 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_categoryname_category;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button btn_search_category;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label27;
@@ -2217,7 +2249,7 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label32;
@@ -2267,5 +2299,9 @@
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ComboBox cbo_category_product;
+        private System.Windows.Forms.TextBox txt_search_product;
+        private System.Windows.Forms.TextBox txt_categoryid_caregory;
+        private System.Windows.Forms.TextBox txt_search_category;
     }
 }

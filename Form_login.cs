@@ -48,7 +48,7 @@ namespace Billing_System
         {
             
             string Username = txt_username.Text;
-            int Password = int.Parse(txt_password.Text);
+            string Password = txt_password.Text;
 
             User user = new User();
             user.Username = Username;

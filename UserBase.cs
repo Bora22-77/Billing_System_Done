@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,6 +76,8 @@ namespace Billing_System
         // Relationship
         public List<Product> Products { get; set; } = new List<Product>();
     }
+    
+
     //Product
     public class Product
     {
@@ -89,6 +92,8 @@ namespace Billing_System
         public int Quantity { get; set; }
         public string Description { get; set; }
     }
+    
+
     //customerOrder
     public class Customer_Order
     {
@@ -161,6 +166,8 @@ namespace Billing_System
         public DateTime TransactionDate { get; set; }
         public string Note { get; set; }
     }
+
+
 
 
 
