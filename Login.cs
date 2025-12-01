@@ -626,7 +626,6 @@ namespace Billing_System
 
         private void btn_savestock_Click(object sender, EventArgs e)
         {
-            
             Stock_Transaction st = new Stock_Transaction
             {
                 ProductId = (int)cbo_product_stock.SelectedValue,
@@ -635,7 +634,36 @@ namespace Billing_System
                 Quantity = int.Parse(txt_qty_stock.Text),
                 Note = txt_note.Text
             };
-            
+
+
+            // Supplier only for IN transactions
+            if (st.TransactionType == "IN")
+                st.SupplierId = (int)cbo_supplier_stock.SelectedValue;
+            else
+                st.SupplierId = null;
+
+            StockTransactionService.AddStock(st);
+            MessageBox.Show("Stock Transaction added!");
+            LoadStockList();
+            LoadProductList();
+        }
+
+        private void view_stock_Click(object sender, EventArgs e)
+        {
+            LoadStockList();
+        }
+
+        private void btn_outstock_Click(object sender, EventArgs e)
+        {
+            Stock_Transaction st = new Stock_Transaction
+            {
+                ProductId = (int)cbo_product_stock.SelectedValue,
+                AdminId = Form1.LoggedUserId,    // <-- USE THIS   // you already have this in your system
+                TransactionType = cbo_type.Text,
+                Quantity = int.Parse(txt_qty_stock.Text),
+                Note = txt_note.Text
+            };
+
 
             // Supplier only for IN transactions
             if (st.TransactionType == "OUT")
@@ -644,14 +672,9 @@ namespace Billing_System
                 st.SupplierId = null;
 
             StockTransactionService.OutStock(st);
-            MessageBox.Show("Stock Transaction Outed!");
+            MessageBox.Show("Stock Transaction outed!");
             LoadStockList();
             LoadProductList();
-        }
-
-        private void view_stock_Click(object sender, EventArgs e)
-        {
-            LoadStockList();
         }
     }
 }

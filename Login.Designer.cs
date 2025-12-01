@@ -2026,7 +2026,7 @@
             // 
             // columnHeader18
             // 
-            this.columnHeader18.Text = "Product Name";
+            this.columnHeader18.Text = "Product ID";
             this.columnHeader18.Width = 152;
             // 
             // columnHeader19
@@ -2057,9 +2057,9 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.MediumPurple;
+            this.groupBox5.Controls.Add(this.btn_outstock);
             this.groupBox5.Controls.Add(this.label40);
             this.groupBox5.Controls.Add(this.view_stock);
-            this.groupBox5.Controls.Add(this.btn_outstock);
             this.groupBox5.Controls.Add(this.btn_addstock);
             this.groupBox5.Location = new System.Drawing.Point(514, 423);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2083,7 +2083,7 @@
             // view_stock
             // 
             this.view_stock.BackColor = System.Drawing.Color.Yellow;
-            this.view_stock.Location = new System.Drawing.Point(382, 38);
+            this.view_stock.Location = new System.Drawing.Point(456, 38);
             this.view_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view_stock.Name = "view_stock";
             this.view_stock.Size = new System.Drawing.Size(159, 54);
@@ -2375,15 +2375,13 @@
             // 
             // btn_outstock
             // 
-            this.btn_outstock.BackColor = System.Drawing.Color.Yellow;
-            this.btn_outstock.Location = new System.Drawing.Point(217, 38);
-            this.btn_outstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_outstock.Location = new System.Drawing.Point(250, 39);
             this.btn_outstock.Name = "btn_outstock";
-            this.btn_outstock.Size = new System.Drawing.Size(159, 53);
-            this.btn_outstock.TabIndex = 61;
+            this.btn_outstock.Size = new System.Drawing.Size(184, 52);
+            this.btn_outstock.TabIndex = 64;
             this.btn_outstock.Text = "Out";
-            this.btn_outstock.UseVisualStyleBackColor = false;
-            this.btn_outstock.Click += new System.EventHandler(this.btn_savestock_Click);
+            this.btn_outstock.UseVisualStyleBackColor = true;
+            this.btn_outstock.Click += new System.EventHandler(this.btn_outstock_Click);
             // 
             // Login
             // 
