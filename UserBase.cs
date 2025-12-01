@@ -159,13 +159,23 @@ namespace Billing_System
         public Product Product { get; set; }
 
         public int AdminId { get; set; }
-        //public User_Admin Admin { get; set; }
+        public int? SupplierId { get; set; }
 
         public string TransactionType { get; set; }  // IN / OUT
         public int Quantity { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Note { get; set; }
     }
+    public class Supplier
+    {
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string ContactPerson { get; set; }
+    }
+
 
 
 

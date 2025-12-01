@@ -4,16 +4,21 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Billing_System
 {
     public partial class Login : Form
     {
         CategoryService categoryService = new CategoryService();
-        ProductService productService = new ProductService();   
+        ProductService productService = new ProductService();
+        SupplierService supplierservice = new SupplierService();
+        StockTransactionService StockTransactionService = new StockTransactionService();
         public Login()
         {
             InitializeComponent();
@@ -73,8 +78,62 @@ namespace Billing_System
             }
         }
 
+        private void LoadSupplierList()
+        {
+            lv_supplier.Items.Clear();
+            
 
+            var suppliers = supplierservice.GetAll();
 
+            foreach (var s in suppliers)
+            {
+                ListViewItem item = new ListViewItem(s.SupplierId.ToString());
+                item.Tag = s.SupplierId;
+
+                item.SubItems.Add(s.SupplierName);
+                item.SubItems.Add(s.Phone);
+                item.SubItems.Add(s.Email);
+                item.SubItems.Add(s.Address);
+                item.SubItems.Add(s.ContactPerson);
+
+                lv_supplier.Items.Add(item);
+            }
+        }
+        private void LoadSupplierCombo()
+        {
+            var list = supplierservice.GetAll();
+
+            cbo_supplier_stock.DataSource = list;
+            cbo_supplier_stock.DisplayMember = "SupplierName";
+            cbo_supplier_stock.ValueMember = "SupplierId";
+        }
+        private void LoadStockList()
+        {
+            lv_stock.Items.Clear();
+            var list = StockTransactionService.GetAllStock();
+
+            foreach (var s in list)
+            {
+                ListViewItem item = new ListViewItem(s.StockId.ToString());
+                item.Tag = s.StockId;
+                item.SubItems.Add(s.ProductId.ToString());
+                item.SubItems.Add(s.TransactionType);
+                item.SubItems.Add(s.Quantity.ToString());
+                item.SubItems.Add(s.Note);
+                item.SubItems.Add(s.SupplierId?.ToString());
+                item.SubItems.Add(s.TransactionDate.ToString("yyyy-MM-dd"));
+                lv_stock.Items.Add(item);
+            }
+        }
+
+        private void LoadProductCombo()
+        {
+            var list = productService.GetAllProducts();
+
+            cbo_product_stock.DataSource = list;
+            cbo_product_stock.DisplayMember = "ProductName";
+            cbo_product_stock.ValueMember = "ProductId";
+        }
 
         private void LoadFormIntoTab(object sender, EventArgs e)
         {
@@ -126,6 +185,11 @@ namespace Billing_System
             LoadCategoryList();  // tab 1
             LoadCategoryCombo(); // tab 2
             LoadProductList();   // tab 2
+            LoadSupplierList();
+            LoadSupplierCombo();
+            LoadProductCombo();
+            LoadSupplierCombo();
+            LoadStockList();
         }
 
         private void tab_stock_Click(object sender, EventArgs e)
@@ -439,6 +503,155 @@ namespace Billing_System
         private void btn_view_category_Click(object sender, EventArgs e)
         {
             LoadCategoryList();
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_supplier_Click(object sender, EventArgs e)
+        {
+            Supplier s = new Supplier
+            {
+                SupplierName = txt_supplier_name.Text,
+                Phone = txt_supplier_phone.Text,
+                Email = txt_supplier_email.Text,
+                Address = txt_supplier_address.Text,
+                ContactPerson = txt_supplier_contactperson.Text
+            };
+
+            supplierservice.Insert(s);
+            LoadSupplierList();
+            MessageBox.Show("Supplier Added!");
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+               txt_supplier_name.Clear();
+               txt_supplier_phone.Clear();
+               txt_supplier_email.Clear();
+               txt_supplier_address.Clear();
+               txt_supplier_contactperson.Clear();
+        }
+
+        private void btn_update_supplier_Click(object sender, EventArgs e)
+        {
+            if (lv_supplier.SelectedItems.Count == 0) return;
+
+            int id = (int)lv_supplier.SelectedItems[0].Tag;
+
+            Supplier s = new Supplier
+            {
+                SupplierId = id,
+                SupplierName=txt_supplier_name.Text,
+                Phone = txt_supplier_phone.Text,
+                Email = txt_supplier_email.Text,
+                Address = txt_supplier_address.Text,
+                ContactPerson = txt_supplier_contactperson.Text
+            };
+
+            supplierservice.Update(s);
+            LoadSupplierList();
+            MessageBox.Show("Supplier Updated!");
+        }
+
+        private void btn_delete_supplier_Click(object sender, EventArgs e)
+        {
+            if (lv_supplier.SelectedItems.Count == 0) return;
+
+            int id = (int)lv_supplier.SelectedItems[0].Tag;
+
+            supplierservice.Delete(id);
+            LoadSupplierList();
+            MessageBox.Show("Supplier Deleted!");
+        }
+
+        private void btn_search_supplier_Click(object sender, EventArgs e)
+        {
+            var suppliers = supplierservice.Search(txt_search_supplier.Text);
+
+            lv_supplier.Items.Clear();
+
+            foreach (var s in suppliers)
+            {
+                ListViewItem item = new ListViewItem(s.SupplierId.ToString());
+                item.Tag = s.SupplierId;
+
+                item.SubItems.Add(s.SupplierName);
+                item.SubItems.Add(s.Phone);
+                item.SubItems.Add(s.Email);
+                item.SubItems.Add(s.Address);
+                item.SubItems.Add(s.ContactPerson);
+
+                lv_supplier.Items.Add(item);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LoadSupplierList();
+        }
+
+        private void lv_supplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_supplier.SelectedItems.Count > 0)
+            {
+                ListViewItem selected = lv_supplier.SelectedItems[0];
+                txt_supplier_name.Text = selected.SubItems[1].Text;
+                txt_supplier_phone.Text = selected.SubItems[2].Text;
+                txt_supplier_email.Text = selected.SubItems[3].Text;
+                txt_supplier_address.Text = selected.SubItems[4].Text;
+                txt_supplier_contactperson.Text = selected.SubItems[5].Text;
+            }
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbo_type.Text == "IN")
+                cbo_supplier_stock.Enabled = true;
+            else
+                cbo_supplier_stock.Enabled = false; // OUT does not need supplier
+        }
+
+        private void btn_savestock_Click(object sender, EventArgs e)
+        {
+            
+            Stock_Transaction st = new Stock_Transaction
+            {
+                ProductId = (int)cbo_product_stock.SelectedValue,
+                AdminId = Form1.LoggedUserId,    // <-- USE THIS   // you already have this in your system
+                TransactionType = cbo_type.Text,
+                Quantity = int.Parse(txt_qty_stock.Text),
+                Note = txt_note.Text
+            };
+            
+
+            // Supplier only for IN transactions
+            if (st.TransactionType == "OUT")
+                st.SupplierId = (int)cbo_supplier_stock.SelectedValue;
+            else
+                st.SupplierId = null;
+
+            StockTransactionService.OutStock(st);
+            MessageBox.Show("Stock Transaction Outed!");
+            LoadStockList();
+            LoadProductList();
+        }
+
+        private void view_stock_Click(object sender, EventArgs e)
+        {
+            LoadStockList();
         }
     }
 }

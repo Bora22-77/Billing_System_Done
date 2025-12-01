@@ -27,6 +27,7 @@ namespace Billing_System
 
         public static string Username;
         public static string Password;
+        public static int LoggedUserId;
         public Form1()
         {
             InitializeComponent();
@@ -75,12 +76,12 @@ namespace Billing_System
 
                if (reader.Read())
                 {
-
                     string fullName = reader["FullName"].ToString();
                     string role = reader["Role"].ToString();
                     MessageBox.Show($"Welcome {fullName} ({role})!");
                     if (role == "Admin")
                     {
+                        LoggedUserId = int.Parse(reader["UserId"].ToString());   // <-- PUT HERE
                         Login login = new Login();
                         login.Show();
                         this.Hide();

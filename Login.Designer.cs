@@ -130,8 +130,10 @@
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tab_order_item = new System.Windows.Forms.TabPage();
+            this.txt_search_category = new System.Windows.Forms.TextBox();
             this.button27 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
+            this.txt_categoryid_caregory = new System.Windows.Forms.TextBox();
             this.txt_categoryname_category = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.lv_category = new System.Windows.Forms.ListView();
@@ -178,32 +180,59 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tab_stock = new System.Windows.Forms.TabPage();
+            this.cbo_product_stock = new System.Windows.Forms.ComboBox();
+            this.cbo_supplier_stock = new System.Windows.Forms.ComboBox();
             this.button28 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbo_type = new System.Windows.Forms.ComboBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txt_note = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_qty_stock = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.lv_stock = new System.Windows.Forms.ListView();
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.txt_categoryid_caregory = new System.Windows.Forms.TextBox();
-            this.txt_search_category = new System.Windows.Forms.TextBox();
+            this.view_stock = new System.Windows.Forms.Button();
+            this.btn_addstock = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lv_supplier = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_supplier_email = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.Label();
+            this.txt_supplier_contactperson = new System.Windows.Forms.TextBox();
+            this.txt_supplier_address = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txt_supplier_phone = new System.Windows.Forms.TextBox();
+            this.txt_search_supplier = new System.Windows.Forms.TextBox();
+            this.txt_supplier_name = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.btn_add_supplier = new System.Windows.Forms.Button();
+            this.btn_search_supplier = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btn_update_supplier = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btn_delete_supplier = new System.Windows.Forms.Button();
+            this.btn_outstock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -230,6 +259,8 @@
             this.tab_stock.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -275,6 +306,7 @@
             this.tabControl1.Controls.Add(this.tab_order_item);
             this.tabControl1.Controls.Add(this.tab_billing);
             this.tabControl1.Controls.Add(this.tab_stock);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 86);
@@ -1277,6 +1309,14 @@
             this.tab_order_item.Text = "Category";
             this.tab_order_item.Click += new System.EventHandler(this.tab_order_item_Click);
             // 
+            // txt_search_category
+            // 
+            this.txt_search_category.Location = new System.Drawing.Point(183, 341);
+            this.txt_search_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_search_category.Name = "txt_search_category";
+            this.txt_search_category.Size = new System.Drawing.Size(544, 41);
+            this.txt_search_category.TabIndex = 80;
+            // 
             // button27
             // 
             this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -1297,6 +1337,15 @@
             this.label25.Size = new System.Drawing.Size(193, 34);
             this.label25.TabIndex = 61;
             this.label25.Text = "Category Name";
+            // 
+            // txt_categoryid_caregory
+            // 
+            this.txt_categoryid_caregory.Location = new System.Drawing.Point(218, 103);
+            this.txt_categoryid_caregory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_categoryid_caregory.Name = "txt_categoryid_caregory";
+            this.txt_categoryid_caregory.ReadOnly = true;
+            this.txt_categoryid_caregory.Size = new System.Drawing.Size(292, 41);
+            this.txt_categoryid_caregory.TabIndex = 64;
             // 
             // txt_categoryname_category
             // 
@@ -1798,21 +1847,19 @@
             // tab_stock
             // 
             this.tab_stock.BackColor = System.Drawing.Color.LightBlue;
+            this.tab_stock.Controls.Add(this.cbo_product_stock);
+            this.tab_stock.Controls.Add(this.cbo_supplier_stock);
             this.tab_stock.Controls.Add(this.button28);
-            this.tab_stock.Controls.Add(this.comboBox1);
-            this.tab_stock.Controls.Add(this.textBox1);
+            this.tab_stock.Controls.Add(this.cbo_type);
+            this.tab_stock.Controls.Add(this.label47);
+            this.tab_stock.Controls.Add(this.txt_note);
+            this.tab_stock.Controls.Add(this.label44);
             this.tab_stock.Controls.Add(this.label14);
-            this.tab_stock.Controls.Add(this.textBox6);
+            this.tab_stock.Controls.Add(this.txt_qty_stock);
             this.tab_stock.Controls.Add(this.label17);
             this.tab_stock.Controls.Add(this.label18);
-            this.tab_stock.Controls.Add(this.button10);
-            this.tab_stock.Controls.Add(this.button11);
-            this.tab_stock.Controls.Add(this.button12);
-            this.tab_stock.Controls.Add(this.button20);
-            this.tab_stock.Controls.Add(this.button16);
-            this.tab_stock.Controls.Add(this.button17);
             this.tab_stock.Controls.Add(this.panel7);
-            this.tab_stock.Controls.Add(this.listView6);
+            this.tab_stock.Controls.Add(this.lv_stock);
             this.tab_stock.Controls.Add(this.groupBox5);
             this.tab_stock.Location = new System.Drawing.Point(4, 43);
             this.tab_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1821,6 +1868,25 @@
             this.tab_stock.TabIndex = 5;
             this.tab_stock.Text = "Stock";
             this.tab_stock.Click += new System.EventHandler(this.tab_stock_Click);
+            // 
+            // cbo_product_stock
+            // 
+            this.cbo_product_stock.FormattingEnabled = true;
+            this.cbo_product_stock.Location = new System.Drawing.Point(264, 371);
+            this.cbo_product_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbo_product_stock.Name = "cbo_product_stock";
+            this.cbo_product_stock.Size = new System.Drawing.Size(191, 42);
+            this.cbo_product_stock.TabIndex = 79;
+            this.cbo_product_stock.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // cbo_supplier_stock
+            // 
+            this.cbo_supplier_stock.FormattingEnabled = true;
+            this.cbo_supplier_stock.Location = new System.Drawing.Point(264, 308);
+            this.cbo_supplier_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbo_supplier_stock.Name = "cbo_supplier_stock";
+            this.cbo_supplier_stock.Size = new System.Drawing.Size(191, 42);
+            this.cbo_supplier_stock.TabIndex = 79;
             // 
             // button28
             // 
@@ -1834,22 +1900,44 @@
             this.button28.UseVisualStyleBackColor = false;
             this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
-            // comboBox1
+            // cbo_type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(268, 134);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 42);
-            this.comboBox1.TabIndex = 76;
+            this.cbo_type.FormattingEnabled = true;
+            this.cbo_type.Items.AddRange(new object[] {
+            "IN",
+            "OUT"});
+            this.cbo_type.Location = new System.Drawing.Point(268, 134);
+            this.cbo_type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbo_type.Name = "cbo_type";
+            this.cbo_type.Size = new System.Drawing.Size(191, 42);
+            this.cbo_type.TabIndex = 76;
+            this.cbo_type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // label47
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 247);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 41);
-            this.textBox1.TabIndex = 75;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(31, 379);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(178, 34);
+            this.label47.TabIndex = 74;
+            this.label47.Text = "Product Name";
+            // 
+            // txt_note
+            // 
+            this.txt_note.Location = new System.Drawing.Point(264, 247);
+            this.txt_note.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_note.Name = "txt_note";
+            this.txt_note.Size = new System.Drawing.Size(191, 41);
+            this.txt_note.TabIndex = 75;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(31, 316);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(186, 34);
+            this.label44.TabIndex = 74;
+            this.label44.Text = "Supplier Name";
             // 
             // label14
             // 
@@ -1860,13 +1948,13 @@
             this.label14.TabIndex = 74;
             this.label14.Text = "Note";
             // 
-            // textBox6
+            // txt_qty_stock
             // 
-            this.textBox6.Location = new System.Drawing.Point(264, 191);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 41);
-            this.textBox6.TabIndex = 68;
+            this.txt_qty_stock.Location = new System.Drawing.Point(264, 191);
+            this.txt_qty_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_qty_stock.Name = "txt_qty_stock";
+            this.txt_qty_stock.Size = new System.Drawing.Size(191, 41);
+            this.txt_qty_stock.TabIndex = 68;
             // 
             // label17
             // 
@@ -1885,72 +1973,6 @@
             this.label18.Size = new System.Drawing.Size(207, 34);
             this.label18.TabIndex = 66;
             this.label18.Text = "TransactionType";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Yellow;
-            this.button10.Location = new System.Drawing.Point(827, 475);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(159, 53);
-            this.button10.TabIndex = 65;
-            this.button10.Text = "Update";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Yellow;
-            this.button11.Location = new System.Drawing.Point(1024, 475);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(159, 53);
-            this.button11.TabIndex = 64;
-            this.button11.Text = "Delete";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Yellow;
-            this.button12.Location = new System.Drawing.Point(631, 475);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(159, 54);
-            this.button12.TabIndex = 63;
-            this.button12.Text = "New";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Yellow;
-            this.button20.Location = new System.Drawing.Point(1405, 475);
-            this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(157, 53);
-            this.button20.TabIndex = 62;
-            this.button20.Text = "Search";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.Yellow;
-            this.button16.Location = new System.Drawing.Point(1232, 475);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(157, 53);
-            this.button16.TabIndex = 62;
-            this.button16.Text = "View All";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Yellow;
-            this.button17.Location = new System.Drawing.Point(429, 475);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(159, 53);
-            this.button17.TabIndex = 61;
-            this.button17.Text = "Save";
-            this.button17.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -1974,26 +1996,28 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Stock";
             // 
-            // listView6
+            // lv_stock
             // 
-            this.listView6.BackColor = System.Drawing.Color.Silver;
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_stock.BackColor = System.Drawing.Color.Silver;
+            this.lv_stock.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader17,
             this.columnHeader18,
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21,
-            this.columnHeader22});
-            this.listView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView6.GridLines = true;
-            this.listView6.HideSelection = false;
-            this.listView6.Location = new System.Drawing.Point(525, 82);
-            this.listView6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(976, 331);
-            this.listView6.TabIndex = 57;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            this.listView6.View = System.Windows.Forms.View.Details;
+            this.columnHeader22,
+            this.columnHeader28});
+            this.lv_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_stock.FullRowSelect = true;
+            this.lv_stock.GridLines = true;
+            this.lv_stock.HideSelection = false;
+            this.lv_stock.Location = new System.Drawing.Point(483, 82);
+            this.lv_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_stock.Name = "lv_stock";
+            this.lv_stock.Size = new System.Drawing.Size(1339, 331);
+            this.lv_stock.TabIndex = 57;
+            this.lv_stock.UseCompatibleStateImageBehavior = false;
+            this.lv_stock.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader17
             // 
@@ -2003,65 +2027,363 @@
             // columnHeader18
             // 
             this.columnHeader18.Text = "Product Name";
-            this.columnHeader18.Width = 200;
+            this.columnHeader18.Width = 152;
             // 
             // columnHeader19
             // 
             this.columnHeader19.Text = "Transaction Type";
-            this.columnHeader19.Width = 152;
+            this.columnHeader19.Width = 142;
             // 
             // columnHeader20
             // 
             this.columnHeader20.Text = "Quantity";
-            this.columnHeader20.Width = 180;
+            this.columnHeader20.Width = 88;
             // 
             // columnHeader21
             // 
             this.columnHeader21.Text = "Note";
-            this.columnHeader21.Width = 180;
+            this.columnHeader21.Width = 184;
             // 
             // columnHeader22
             // 
-            this.columnHeader22.Text = "AdminID";
+            this.columnHeader22.Text = "SupplierID";
+            this.columnHeader22.Width = 96;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Transaction Date";
+            this.columnHeader28.Width = 332;
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.MediumPurple;
             this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Location = new System.Drawing.Point(403, 423);
+            this.groupBox5.Controls.Add(this.view_stock);
+            this.groupBox5.Controls.Add(this.btn_outstock);
+            this.groupBox5.Controls.Add(this.btn_addstock);
+            this.groupBox5.Location = new System.Drawing.Point(514, 423);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(1191, 187);
+            this.groupBox5.Size = new System.Drawing.Size(636, 187);
             this.groupBox5.TabIndex = 77;
             this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(465, 0);
+            this.label40.Location = new System.Drawing.Point(268, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(183, 39);
             this.label40.TabIndex = 18;
             this.label40.Text = "Operations";
             // 
-            // txt_categoryid_caregory
+            // view_stock
             // 
-            this.txt_categoryid_caregory.Location = new System.Drawing.Point(218, 103);
-            this.txt_categoryid_caregory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_categoryid_caregory.Name = "txt_categoryid_caregory";
-            this.txt_categoryid_caregory.ReadOnly = true;
-            this.txt_categoryid_caregory.Size = new System.Drawing.Size(292, 41);
-            this.txt_categoryid_caregory.TabIndex = 64;
+            this.view_stock.BackColor = System.Drawing.Color.Yellow;
+            this.view_stock.Location = new System.Drawing.Point(382, 38);
+            this.view_stock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.view_stock.Name = "view_stock";
+            this.view_stock.Size = new System.Drawing.Size(159, 54);
+            this.view_stock.TabIndex = 63;
+            this.view_stock.Text = "View all";
+            this.view_stock.UseVisualStyleBackColor = false;
+            this.view_stock.Click += new System.EventHandler(this.view_stock_Click);
             // 
-            // txt_search_category
+            // btn_addstock
             // 
-            this.txt_search_category.Location = new System.Drawing.Point(183, 341);
-            this.txt_search_category.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_search_category.Name = "txt_search_category";
-            this.txt_search_category.Size = new System.Drawing.Size(544, 41);
-            this.txt_search_category.TabIndex = 80;
+            this.btn_addstock.BackColor = System.Drawing.Color.Yellow;
+            this.btn_addstock.Location = new System.Drawing.Point(53, 38);
+            this.btn_addstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_addstock.Name = "btn_addstock";
+            this.btn_addstock.Size = new System.Drawing.Size(159, 53);
+            this.btn_addstock.TabIndex = 61;
+            this.btn_addstock.Text = "Add";
+            this.btn_addstock.UseVisualStyleBackColor = false;
+            this.btn_addstock.Click += new System.EventHandler(this.btn_savestock_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.lv_supplier);
+            this.tabPage3.Controls.Add(this.txt_supplier_email);
+            this.tabPage3.Controls.Add(this.email);
+            this.tabPage3.Controls.Add(this.txt_supplier_contactperson);
+            this.tabPage3.Controls.Add(this.txt_supplier_address);
+            this.tabPage3.Controls.Add(this.label45);
+            this.tabPage3.Controls.Add(this.label46);
+            this.tabPage3.Controls.Add(this.txt_supplier_phone);
+            this.tabPage3.Controls.Add(this.txt_search_supplier);
+            this.tabPage3.Controls.Add(this.txt_supplier_name);
+            this.tabPage3.Controls.Add(this.phone);
+            this.tabPage3.Controls.Add(this.label48);
+            this.tabPage3.Controls.Add(this.groupBox9);
+            this.tabPage3.Location = new System.Drawing.Point(4, 43);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1822, 621);
+            this.tabPage3.TabIndex = 6;
+            this.tabPage3.Text = "Supplier";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // lv_supplier
+            // 
+            this.lv_supplier.BackColor = System.Drawing.Color.Silver;
+            this.lv_supplier.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25,
+            this.columnHeader26,
+            this.columnHeader27});
+            this.lv_supplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lv_supplier.FullRowSelect = true;
+            this.lv_supplier.GridLines = true;
+            this.lv_supplier.HideSelection = false;
+            this.lv_supplier.Location = new System.Drawing.Point(648, 40);
+            this.lv_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_supplier.Name = "lv_supplier";
+            this.lv_supplier.Size = new System.Drawing.Size(1037, 331);
+            this.lv_supplier.TabIndex = 92;
+            this.lv_supplier.UseCompatibleStateImageBehavior = false;
+            this.lv_supplier.View = System.Windows.Forms.View.Details;
+            this.lv_supplier.SelectedIndexChanged += new System.EventHandler(this.lv_supplier_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 40;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Supplier Name";
+            this.columnHeader23.Width = 225;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Phone";
+            this.columnHeader24.Width = 121;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Email";
+            this.columnHeader25.Width = 120;
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Address";
+            this.columnHeader26.Width = 170;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Contact Person";
+            this.columnHeader27.Width = 150;
+            // 
+            // txt_supplier_email
+            // 
+            this.txt_supplier_email.Location = new System.Drawing.Point(322, 186);
+            this.txt_supplier_email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_supplier_email.Name = "txt_supplier_email";
+            this.txt_supplier_email.Size = new System.Drawing.Size(292, 41);
+            this.txt_supplier_email.TabIndex = 91;
+            // 
+            // email
+            // 
+            this.email.AutoSize = true;
+            this.email.Location = new System.Drawing.Point(138, 193);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(80, 34);
+            this.email.TabIndex = 90;
+            this.email.Text = "Email";
+            // 
+            // txt_supplier_contactperson
+            // 
+            this.txt_supplier_contactperson.Location = new System.Drawing.Point(322, 307);
+            this.txt_supplier_contactperson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_supplier_contactperson.Name = "txt_supplier_contactperson";
+            this.txt_supplier_contactperson.Size = new System.Drawing.Size(292, 41);
+            this.txt_supplier_contactperson.TabIndex = 89;
+            // 
+            // txt_supplier_address
+            // 
+            this.txt_supplier_address.Location = new System.Drawing.Point(322, 249);
+            this.txt_supplier_address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_supplier_address.Name = "txt_supplier_address";
+            this.txt_supplier_address.Size = new System.Drawing.Size(292, 41);
+            this.txt_supplier_address.TabIndex = 89;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(140, 310);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(184, 34);
+            this.label45.TabIndex = 87;
+            this.label45.Text = "Contact Person";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(140, 256);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(108, 34);
+            this.label46.TabIndex = 88;
+            this.label46.Text = "Address";
+            // 
+            // txt_supplier_phone
+            // 
+            this.txt_supplier_phone.Location = new System.Drawing.Point(322, 130);
+            this.txt_supplier_phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_supplier_phone.Name = "txt_supplier_phone";
+            this.txt_supplier_phone.Size = new System.Drawing.Size(292, 41);
+            this.txt_supplier_phone.TabIndex = 84;
+            // 
+            // txt_search_supplier
+            // 
+            this.txt_search_supplier.Location = new System.Drawing.Point(679, 384);
+            this.txt_search_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_search_supplier.Name = "txt_search_supplier";
+            this.txt_search_supplier.Size = new System.Drawing.Size(544, 41);
+            this.txt_search_supplier.TabIndex = 85;
+            // 
+            // txt_supplier_name
+            // 
+            this.txt_supplier_name.Location = new System.Drawing.Point(322, 76);
+            this.txt_supplier_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_supplier_name.Name = "txt_supplier_name";
+            this.txt_supplier_name.Size = new System.Drawing.Size(292, 41);
+            this.txt_supplier_name.TabIndex = 86;
+            // 
+            // phone
+            // 
+            this.phone.AutoSize = true;
+            this.phone.Location = new System.Drawing.Point(138, 130);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(86, 34);
+            this.phone.TabIndex = 83;
+            this.phone.Text = "Phone";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(138, 76);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(186, 34);
+            this.label48.TabIndex = 82;
+            this.label48.Text = "Supplier Name";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.MediumPurple;
+            this.groupBox9.Controls.Add(this.label49);
+            this.groupBox9.Controls.Add(this.btn_add_supplier);
+            this.groupBox9.Controls.Add(this.btn_search_supplier);
+            this.groupBox9.Controls.Add(this.button7);
+            this.groupBox9.Controls.Add(this.btn_update_supplier);
+            this.groupBox9.Controls.Add(this.button9);
+            this.groupBox9.Controls.Add(this.btn_delete_supplier);
+            this.groupBox9.Location = new System.Drawing.Point(423, 439);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(1141, 142);
+            this.groupBox9.TabIndex = 93;
+            this.groupBox9.TabStop = false;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(465, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(183, 39);
+            this.label49.TabIndex = 18;
+            this.label49.Text = "Operations";
+            // 
+            // btn_add_supplier
+            // 
+            this.btn_add_supplier.BackColor = System.Drawing.Color.Yellow;
+            this.btn_add_supplier.Location = new System.Drawing.Point(13, 62);
+            this.btn_add_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_add_supplier.Name = "btn_add_supplier";
+            this.btn_add_supplier.Size = new System.Drawing.Size(159, 53);
+            this.btn_add_supplier.TabIndex = 43;
+            this.btn_add_supplier.Text = "Add";
+            this.btn_add_supplier.UseVisualStyleBackColor = false;
+            this.btn_add_supplier.Click += new System.EventHandler(this.btn_add_supplier_Click);
+            // 
+            // btn_search_supplier
+            // 
+            this.btn_search_supplier.BackColor = System.Drawing.Color.Yellow;
+            this.btn_search_supplier.Location = new System.Drawing.Point(960, 60);
+            this.btn_search_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_search_supplier.Name = "btn_search_supplier";
+            this.btn_search_supplier.Size = new System.Drawing.Size(157, 53);
+            this.btn_search_supplier.TabIndex = 44;
+            this.btn_search_supplier.Text = "Search";
+            this.btn_search_supplier.UseVisualStyleBackColor = false;
+            this.btn_search_supplier.Click += new System.EventHandler(this.btn_search_supplier_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Yellow;
+            this.button7.Location = new System.Drawing.Point(205, 60);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(159, 54);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "New";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // btn_update_supplier
+            // 
+            this.btn_update_supplier.BackColor = System.Drawing.Color.Yellow;
+            this.btn_update_supplier.Location = new System.Drawing.Point(389, 60);
+            this.btn_update_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update_supplier.Name = "btn_update_supplier";
+            this.btn_update_supplier.Size = new System.Drawing.Size(159, 53);
+            this.btn_update_supplier.TabIndex = 47;
+            this.btn_update_supplier.Text = "Update";
+            this.btn_update_supplier.UseVisualStyleBackColor = false;
+            this.btn_update_supplier.Click += new System.EventHandler(this.btn_update_supplier_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Yellow;
+            this.button9.Location = new System.Drawing.Point(771, 60);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(157, 53);
+            this.button9.TabIndex = 44;
+            this.button9.Text = "View All";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // btn_delete_supplier
+            // 
+            this.btn_delete_supplier.BackColor = System.Drawing.Color.Yellow;
+            this.btn_delete_supplier.Location = new System.Drawing.Point(584, 60);
+            this.btn_delete_supplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete_supplier.Name = "btn_delete_supplier";
+            this.btn_delete_supplier.Size = new System.Drawing.Size(159, 53);
+            this.btn_delete_supplier.TabIndex = 46;
+            this.btn_delete_supplier.Text = "Delete";
+            this.btn_delete_supplier.UseVisualStyleBackColor = false;
+            this.btn_delete_supplier.Click += new System.EventHandler(this.btn_delete_supplier_Click);
+            // 
+            // btn_outstock
+            // 
+            this.btn_outstock.BackColor = System.Drawing.Color.Yellow;
+            this.btn_outstock.Location = new System.Drawing.Point(217, 38);
+            this.btn_outstock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_outstock.Name = "btn_outstock";
+            this.btn_outstock.Size = new System.Drawing.Size(159, 53);
+            this.btn_outstock.TabIndex = 61;
+            this.btn_outstock.Text = "Out";
+            this.btn_outstock.UseVisualStyleBackColor = false;
+            this.btn_outstock.Click += new System.EventHandler(this.btn_savestock_Click);
             // 
             // Login
             // 
@@ -2123,6 +2445,10 @@
             this.panel7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2194,7 +2520,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView lv_stock;
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
@@ -2208,18 +2534,15 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button view_stock;
+        private System.Windows.Forms.Button btn_addstock;
+        private System.Windows.Forms.TextBox txt_note;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_qty_stock;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ColumnHeader columnHeader22;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_type;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -2240,7 +2563,6 @@
         private System.Windows.Forms.TextBox txt_categoryname_category;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btn_search_category;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox9;
@@ -2271,8 +2593,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -2303,5 +2623,40 @@
         private System.Windows.Forms.TextBox txt_search_product;
         private System.Windows.Forms.TextBox txt_categoryid_caregory;
         private System.Windows.Forms.TextBox txt_search_category;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ListView lv_supplier;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
+        private System.Windows.Forms.TextBox txt_supplier_email;
+        private System.Windows.Forms.Label email;
+        private System.Windows.Forms.TextBox txt_supplier_address;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox txt_supplier_phone;
+        private System.Windows.Forms.TextBox txt_search_supplier;
+        private System.Windows.Forms.TextBox txt_supplier_name;
+        private System.Windows.Forms.Label phone;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Button btn_add_supplier;
+        private System.Windows.Forms.Button btn_search_supplier;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_update_supplier;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_delete_supplier;
+        private System.Windows.Forms.TextBox txt_supplier_contactperson;
+        private System.Windows.Forms.ComboBox cbo_supplier_stock;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cbo_product_stock;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.Button btn_outstock;
     }
 }

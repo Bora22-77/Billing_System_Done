@@ -88,6 +88,8 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockTransactionService.cs" />
+    <Compile Include="SupplierService.cs" />
     <Compile Include="UserBase.cs" />
     <Compile Include="UserDashboard.cs">
       <SubType>Form</SubType>
