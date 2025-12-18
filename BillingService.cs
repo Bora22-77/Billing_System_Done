@@ -20,7 +20,6 @@ namespace Billing_System
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@o", orderId);
             cmd.Parameters.AddWithValue("@t", totalAmount);
-
             con.Open();
             cmd.ExecuteNonQuery();
         }
